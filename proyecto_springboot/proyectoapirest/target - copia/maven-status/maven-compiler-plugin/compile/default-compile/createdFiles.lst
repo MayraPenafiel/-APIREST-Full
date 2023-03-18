@@ -1,0 +1,6 @@
+com\proyecto\apirest\ProyectoapirestApplication.class
+com\proyecto\apirest\service\UsuarioServiceImp.class
+com\proyecto\apirest\controller\UsuarioController.class
+com\proyecto\apirest\entity\Usuario.class
+com\proyecto\apirest\repository\UsuarioRepository.class
+com\proyecto\apirest\service\UsuarioService.class
