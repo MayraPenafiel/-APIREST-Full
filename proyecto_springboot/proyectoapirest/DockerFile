@@ -1,0 +1,6 @@
+FROM openjdk:8-jds-apine
+RUN adddgroup -S spring && adduser -S adduser -S spring -G spring
+USER string:spring
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} proyectoapirest-1.0.jar
+ENTRYPOINT["java","-jar","/proyectoapirest-1.0.jar"]
