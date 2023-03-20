@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  apirest:
+   image: proyectoapirest:latest
+   environment:
+    - dbURL=db_api:3306/apirest_full
+   ports:
+    - "8080:80"
+   depends_on:
+    - db-api
+    
+  db_api:
+   image: mysql:latest
+   restart: always
+   environment:
+    MYSQL_ROOT_PASSWORD: ''
+    MYSQL_DATABASE: apirest_full
+    MYSQL_USER: root
+    MYSQL_PASSWORD: ''
+   ports:
+    - "3306:3306"
+   volumes:
+    - db_data:/var/lib/mysql
+volumes:
+ db_data: {}
+   
